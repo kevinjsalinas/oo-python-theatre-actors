@@ -38,9 +38,10 @@ class Actor:
 
     def characters(self):
         new_list = []
-        if len(self.roles) > 0:
-            name = self.roles[0].name.pop()
-            new_list.append(self.roles[0].name)
+        roles_list = [a.role for a in self.auditions]
+        for i in range(0, len(roles_list)):
+            new_list.append(self.roles[i].name)    
+        return new_list
         
 #notes
 
